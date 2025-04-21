@@ -20,16 +20,16 @@ const Header = () => {
       className="backdrop-blur-md bg-white/10 dark:bg-gray-900/20 py-4 px-6 rounded-b-lg shadow-sm"
     >
       <div className="flex justify-between items-center">
-        <Link to="/" className="flex items-center space-x-2">
+        <Link to="/home" className="flex items-center space-x-2">
           <CloudRain className="text-primary-500" size={28} />
           <span className="text-xl font-display font-bold text-gray-900 dark:text-white">WeatherLofi</span>
         </Link>
         
         <nav className="flex items-center space-x-1 sm:space-x-2">
           <Link 
-            to="/"
+            to="/home"
             className={`p-2 rounded-lg transition-colors ${
-              isActive('/') 
+              isActive('/home') 
                 ? 'bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-400' 
                 : 'text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800/30'
             }`}
