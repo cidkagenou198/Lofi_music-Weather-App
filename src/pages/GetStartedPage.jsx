@@ -72,7 +72,7 @@ const GetStartedPage = () => {
 
         <motion.div variants={itemVariants}>
           <button
-            onClick={() => navigate('/')}
+            onClick={() => navigate('https://lofi-weather-music.netlify.app/')}
             className="px-8 py-4 bg-white text-primary-600 rounded-full font-semibold text-lg
                      hover:bg-white/90 transform hover:scale-105 transition-all duration-300
                      shadow-lg hover:shadow-xl"
