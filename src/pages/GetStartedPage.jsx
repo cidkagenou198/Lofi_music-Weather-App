@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { CloudRain, Music, Sun, Moon } from 'lucide-react';
 
 const GetStartedPage = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    const hasVisited = localStorage.getItem('hasVisitedBefore');
+    
+    if (hasVisited && location.pathname === '/') {
+      navigate('/home', { replace: true });
+    }
+  }, [navigate, location]);
+
+  const handleGetStarted = () => {
+    localStorage.setItem('hasVisitedBefore', 'true');
+    navigate('/home');
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -72,7 +86,7 @@ const GetStartedPage = () => {
 
         <motion.div variants={itemVariants}>
           <button
-            onClick={() => navigate('/home')}
+            onClick={handleGetStarted}
             className="px-8 py-4 bg-white text-primary-600 rounded-full font-semibold text-lg
                      hover:bg-white/90 transform hover:scale-105 transition-all duration-300
                      shadow-lg hover:shadow-xl"
