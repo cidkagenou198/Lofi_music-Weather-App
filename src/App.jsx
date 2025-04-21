@@ -9,23 +9,14 @@ import AboutPage from './pages/AboutPage';
 import GetStartedPage from './pages/GetStartedPage';
 
 function App() {
-  // Check if it's the first visit
-  const isFirstVisit = !localStorage.getItem('hasVisited');
-
-  if (isFirstVisit) {
-    localStorage.setItem('hasVisited', 'true');
-  }
-
   return (
     <Router>
       <PreferencesProvider>
         <WeatherProvider>
           <MusicProvider>
             <Routes>
-              <Route path="/" element={
-                isFirstVisit ? <Navigate to="/get-started" replace /> : <HomePage />
-              } />
-              <Route path="/get-started" element={<GetStartedPage />} />
+              <Route path="/" element={<GetStartedPage />} />
+              <Route path="/home" element={<HomePage />} />
               <Route path="/settings" element={<SettingsPage />} />
               <Route path="/about" element={<AboutPage />} />
             </Routes>
