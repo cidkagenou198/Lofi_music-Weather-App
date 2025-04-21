@@ -70,7 +70,11 @@ const AboutPage: React.FC = () => {
                   <Github size={18} className="mr-2" />
                   GitHub  
                 </a>
-                
+                  <a href="https://x.com/cidkagenou198?t=iR0AieFM-RWuDHptxm0WdA&s=09" className="flex items-center px-4 py-2 rounded-lg bg-blue-500 text-white hover:bg-blue-600 transition-colors">
+                    <Twitter size={18} className="mr-2" />
+                        Twitter
+                 </a>
+
                 <a href="https://buymeacoffee.com/cidkagenou" className="flex items-center px-4 py-2 rounded-lg bg-accent-500 text-white hover:bg-accent-600 transition-colors">
                   <Coffee size={18} className="mr-2" />
                   Buy Me a Coffee
