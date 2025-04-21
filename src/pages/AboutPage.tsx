@@ -66,7 +66,7 @@ const AboutPage: React.FC = () => {
             <section>
               <h2 className="text-xl font-display font-semibold mb-4">Connect With Us</h2>
               <div className="flex flex-wrap gap-3">
-                <a href="#" className="flex items-center px-4 py-2 rounded-lg bg-gray-800 text-white hover:bg-gray-700 transition-colors">
+                <a href="https://github.com/cidkagenou198" className="flex items-center px-4 py-2 rounded-lg bg-gray-800 text-white hover:bg-gray-700 transition-colors">
                   <Github size={18} className="mr-2" />
                   GitHub
                 </a>
