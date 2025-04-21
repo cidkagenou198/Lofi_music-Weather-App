@@ -68,13 +68,10 @@ const AboutPage: React.FC = () => {
               <div className="flex flex-wrap gap-3">
                 <a href="https://github.com/cidkagenou198" className="flex items-center px-4 py-2 rounded-lg bg-gray-800 text-white hover:bg-gray-700 transition-colors">
                   <Github size={18} className="mr-2" />
-                  GitHub
+                  GitHub  
                 </a>
-                <a href="#" className="flex items-center px-4 py-2 rounded-lg bg-blue-500 text-white hover:bg-blue-600 transition-colors">
-                  <Twitter size={18} className="mr-2" />
-                  Twitter
-                </a>
-                <a href="#" className="flex items-center px-4 py-2 rounded-lg bg-accent-500 text-white hover:bg-accent-600 transition-colors">
+                
+                <a href="https://buymeacoffee.com/cidkagenou" className="flex items-center px-4 py-2 rounded-lg bg-accent-500 text-white hover:bg-accent-600 transition-colors">
                   <Coffee size={18} className="mr-2" />
                   Buy Me a Coffee
                 </a>
