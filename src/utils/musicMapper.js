@@ -15,7 +15,7 @@ const musicLibrary = [
     artist: 'Chillhop',
     url: 'https://audio.jukehost.co.uk/HOrMElQd2JrS0NFMaoZfIuECqobuKjGX',
     weatherType: 'rain',
-    coverArt: 'https://rb.gy/5jyg4i?auto=compress&cs=tinysrgb&w=300'
+    coverArt: 'https://images.pexels.com/photos/7002973/pexels-photo-7002973.jpeg?auto=compress&cs=tinysrgb&w=300'
   },
   {
     id: 'sunny-1',
