@@ -1,24 +1,20 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { CloudRain, Music, Sun, Moon } from 'lucide-react';
 
 const GetStartedPage = () => {
   const navigate = useNavigate();
-  const location = useLocation();
-
+  
+  // Check if user came from internal navigation
   useEffect(() => {
-    const hasVisited = localStorage.getItem('hasVisitedBefore');
+    const hasVisited = sessionStorage.getItem('hasVisited');
+    const cameFromInternalNav = document.referrer.includes(window.location.host);
     
-    if (hasVisited && location.pathname === '/') {
-      navigate('/home', { replace: true });
+    if (hasVisited && cameFromInternalNav) {
+      navigate('/home');
     }
-  }, [navigate, location]);
-
-  const handleGetStarted = () => {
-    localStorage.setItem('hasVisitedBefore', 'true');
-    navigate('/home');
-  };
+  }, [navigate]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -86,7 +82,10 @@ const GetStartedPage = () => {
 
         <motion.div variants={itemVariants}>
           <button
-            onClick={handleGetStarted}
+            onClick={() => {
+              sessionStorage.setItem('hasVisited', 'true');
+              navigate('/home');
+            }}
             className="px-8 py-4 bg-white text-primary-600 rounded-full font-semibold text-lg
                      hover:bg-white/90 transform hover:scale-105 transition-all duration-300
                      shadow-lg hover:shadow-xl"
