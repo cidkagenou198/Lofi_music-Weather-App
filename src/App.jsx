@@ -9,6 +9,14 @@ import AboutPage from './pages/AboutPage';
 import GetStartedPage from './pages/GetStartedPage';
 
 function App() {
+  // Check if the user has visited before
+  const hasVisited = sessionStorage.getItem('hasVisited');
+
+  // If this is the first visit in this session, mark it
+  if (!hasVisited) {
+    sessionStorage.setItem('hasVisited', 'true');
+  }
+
   return (
     <Router>
       <PreferencesProvider>
@@ -19,6 +27,7 @@ function App() {
               <Route path="/home" element={<HomePage />} />
               <Route path="/settings" element={<SettingsPage />} />
               <Route path="/about" element={<AboutPage />} />
+              {/* Catch all other routes and redirect to get started page */}
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </MusicProvider>
