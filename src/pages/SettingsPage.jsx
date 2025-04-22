@@ -48,7 +48,7 @@ const SettingsPage = () => {
           className="max-w-2xl mx-auto"
         >
           <div className="mb-6 flex items-center">
-            <Link to="/" className="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 mr-3">
+            <Link to="/home" className="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 mr-3">
               <ArrowLeft size={20} />
             </Link>
             <h1 className="text-2xl font-display font-bold">Settings</h1>
